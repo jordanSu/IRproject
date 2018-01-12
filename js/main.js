@@ -23,8 +23,8 @@ $('.submit-button').on('click', function(event) {
     $.ajax({
         url: url,
         type: "POST",
-        //data: "okok",//JSON.stringify({"category": category, "content": content}),
-        //contentType: "text/plain"   //"application/json"
+        data: "okok",//JSON.stringify({"category": category, "content": content}),
+        contentType: "text/plain"   //"application/json"
     }).done(function(data){
             $('#picker').removeAttr('disabled', false);
             $('#link').attr('disabled', false);
