@@ -28,6 +28,23 @@
     .button-bar {
         margin-top: 0.5em;
     }
+
+    div.dropdown-menu {
+        width: 200%;
+        overflow: scroll;
+    }
+
+    .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark{
+        position: absolute;
+        display: inline-block;
+        left: 5px;
+        margin-top: 5px;
+    }
+
+    span.text {
+        margin-left: 5px;
+    }
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,7 +61,7 @@
     <script>
         window.fbAsyncInit = function() {
             FB.init({
-                appId            : '153579138625166',
+                appId            : '1742717582673335',
                 autoLogAppEvents : true,
                 xfbml            : true,
                 version          : 'v2.11'
@@ -137,31 +154,28 @@
             </div>
         </div>
     </div>
+    </div>
+    <div class="container">
     <div class="row">
-        <div class="col-lg-6" form-group>
+        <div class="col-lg-6 form-group">
             <label for="picker">Sentence Picker:</label>
-            <select id="picker" class="selectpicker form-control" multiple>
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
-                <option>D</option>
+            <select id="picker" class="selectpicker form-control" show-icon="false" show-tick="false" multiple disabled>
             </select>
             <div class="row button-bar">
                 <div class="col-lg-12 text-right">
-                    <button type="button" class="btn btn-success pick-button">Finish picking</button>
+                    <button type="button" class="btn btn-success pick-button" disabled>Finish picking</button>
                 </div>
             </div>
 
         </div>
         <div class="col-lg-6 form-group">
             <label for="link">Link:</label>
-            <input id="link" type="text" class="form-control">
+            <input id="link" type="text" class="form-control" disabled>
             <label for="post">Post:</label>
-            <textarea id="post" class="form-control" rows="5" id="content"></textarea>
+            <textarea id="post" class="form-control" rows="5" id="content" disabled></textarea>
             <div class="row button-bar">
                 <div class="col-lg-12 text-right">
-                    <button type="button" class="btn btn-primary fb-button">Post on FB</button>
-                    <button type="button" class="btn btn-primary new-fb-button">Implicit Post on FB</button>
+                    <button type="button" class="btn btn-primary fb-button" disabled>Post on FB</button>
                 </div>
             </div>
         </div>
