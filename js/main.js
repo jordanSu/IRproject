@@ -7,7 +7,6 @@ $('.submit-button').on('click', function(event) {
     category = $(event.target).parent().parent().parent().attr('id');
     content = $(event.target).parent().parent().siblings("textarea").val();
 
-    //url = "http://140.112.106.232:16881/hello"
     url = "http://localhost:5000/register";
     console.log('ajax send');
     $.ajax({
